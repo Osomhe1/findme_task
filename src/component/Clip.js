@@ -103,7 +103,7 @@ export default function Clip() {
     <div className='bg-gray-200'>
       <section>
         <div className="border-b-2 border-gray-500 ">
-          <nav className="w-[50%] m-auto p-">
+          <nav className="w-[100%] md:w-[70%] lg:w-[50%] m-auto p-">
             <ul className="flex w-full justify-between font-semibold ">
               <li className="border-b-4 border-black p-4">Gallary</li>
               <li className=" p-4">Publish</li>

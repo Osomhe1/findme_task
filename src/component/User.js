@@ -14,15 +14,16 @@ export default function User() {
       <section></section>
 
       <section className="relative  ">
-        <div className="w-[100%] h-[500px] border-t-4 border-b-4 border-gray-500 ">
+        <div className="w-[100%] h-[400px] border-t-4 border-b-4 border-gray-500 ">
           <img
             className="w-full h-full object-contai object-cover"
             src={placeHol}
             alt=""
           />
         </div>
-        <div className="flex item-center justify-between w-[90%] m-auto  py-6  my-4">
-          <div className="flex items-center mx-8   ">
+
+        <div className="flex item-center justify-between w-[90%] m-auto   py-6  my-4">
+          <div className="grid lg:flex items-center mx-8   ">
             <div className="rounded-xl absolute bottom-0 left-0 mx-16 z-10 object-contain  bg-gradient-to-r from-[#816FF1] via-red-500 to-[#E83B1E] p-1">
               <img
                 className="w-[150px] h-[200px]   rounded-xl "
@@ -30,7 +31,9 @@ export default function User() {
                 alt=""
               />
             </div>
-            <div className="lg:mx-32">
+
+            <div className="lg:mx-32 md:mx-40 relative -bottom-40 md:-bottom-0  ">
+              {/* relative -bottom-40  */}
               <div className="flex items-center p-2 gap-2">
                 <h1 className="text-black text-3xl font-semibold  ">
                   Tina Rosser

@@ -4,7 +4,7 @@ export default function Publish() {
   return (
     <div>
       <section className="bg-gray-400">
-        <div className="flex item-center justify-between w-[90%] m-auto  py-6">
+        <div className="flex flex-wrap item-center justify-between w-[90%] m-auto  py-6">
           <div className="">
             <h1 className="text-black font-semibold border-l-4 p-2  border-l-indigo-500">
               Publish

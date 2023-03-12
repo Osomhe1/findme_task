@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className=" ">
       <section className=" bg-gray-400 ">
-        <div className="lg:flex items-center justify-between  p-2">
+        <div className="flex flex-wrap items-center justify-between  p-2">
           <div className="">
             <Logo />
           </div>
@@ -55,7 +55,7 @@ export default function Home() {
         </div>
       </section>
       {/* section 2 */}
-      <section className="lg:flex items-center justify-between m-4">
+      <section className="flex items-center justify-between m-4">
         <div className=" text-2xl">
           <BiArrowBack />
         </div>
