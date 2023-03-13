@@ -55,9 +55,9 @@ export default function User() {
 
           <div className="">
             <span class="relative flex h-3 w-">
-              <RiMessage2Fill className="text-4xl" />
+              <RiMessage2Fill className="text- w-[30px] h-[30px] text-[#2B365A] " />
               {/* <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span> */}
-              <span class="absolute inline-flex right-0 -mx-4 rounded-full h-5 w-5 text-white text-sm bg-red-500">
+              <span class="absolute inline-flex right-0 -mx-4 bottom-1 rounded-full h-5 w-5 text-white text-sm bg-[#FF3D00]">
                 <small className="text-center mx-auto">15</small>
               </span>
             </span>

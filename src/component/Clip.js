@@ -100,15 +100,17 @@ export default function Clip() {
 
 
   return (
-    <div className='bg-gray-200'>
+    <div className="bg-gray-200">
       <section>
-        <div className="border-b-2 border-gray-500 ">
+        <div className="border-b-2 border-[#E4E4E4] ">
           <nav className="w-[100%] md:w-[70%] lg:w-[50%] m-auto p-">
             <ul className="flex w-full justify-between font-semibold ">
-              <li className="border-b-4 border-black p-4">Gallary</li>
-              <li className=" p-4">Publish</li>
-              <li className=" p-4">About</li>
-              <li className=" p-4">Contact</li>
+              <li className="border-b-4 border-[#2B365A] text-[#2B365A] p-4">
+                Gallary
+              </li>
+              <li className="text-[#545361] p-4">Publish</li>
+              <li className="text-[#545361] p-4">About</li>
+              <li className="text-[#545361] p-4">Contact</li>
             </ul>
           </nav>
         </div>
@@ -116,14 +118,14 @@ export default function Clip() {
       <section>
         <div className="flex item-center justify-between w-[90%] m-auto  py-6">
           <div className="">
-            <h1 className="text-black font-semibold border-l-4 p-2  border-l-green-500">
+            <h1 className="text-[#2B365A] font-semibold border-l-4 p-2  border-l-[#41E233]">
               Clip
             </h1>
-            <p className="text-gray-400 p-2">
+            <p className="text-[#999999] p-2">
               SHowing here are clip of people you are connected with.
             </p>
           </div>
-          <div className="text-gray-400">
+          <div className="text-[#999999]">
             <h1>Manage</h1>
           </div>
         </div>
@@ -147,7 +149,6 @@ export default function Clip() {
               >
                 <div className="top-[5%] absolute px-4 text-gray-400 text-lg flex w-full justify-between ">
                   <p className="w-[100%]  flex-grow ">{x.status} </p>
-                  
                 </div>
                 <div className="top-[15%] absolute px-4 text-gray-400 w-full flex items-center justify-between ">
                   <div className="">
