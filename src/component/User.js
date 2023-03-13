@@ -5,7 +5,7 @@ import {RiMessage2Fill} from 'react-icons/ri'
 
 
 const imgPic = `https://images.unsplash.com/photo-1678101629507-10cb3ba27fd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8UzRNS0xBc0JCNzR8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60`
-const placeHol = `http://via.placeholder.com/640x360`
+const placeHol = `https://s3-alpha-sig.figma.com/img/985e/d4f7/de8b9c646dccd2d05b1a4285911b784b?Expires=1679875200&Signature=X1RD2np6R5dxdvffk7bra2c68qRXAgV1Qp1xruV8eDkX6zvIzfK08yMFqJS4Hn1dcHGZNd9Tx4ZFiOD3-kqneiTzoAvn4q1E5Aq1zDJhA91Mg2UneNGeqnj40faJTMAz-sPQ4YNv-2z-EEMmcqPGsO5je4qTbWDusZXEQkgMabtq~1efm1v1FGC4Mbo9T0Et4sEagsDmpGEiIAbMfg~Svbbycb-Obf30VpLczHnpnXnYqfpPGHZ7h6WdqquD0VxIyz8WOwMkBFvsrWJ3VRBAVhttzGlx2ZL2kJGOE6fiSXOFkNaT~cBPOU7emokeZlJ6LLmQbdUCA~9V-UFj5OG6zQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4`
 
 export default function User() {
     

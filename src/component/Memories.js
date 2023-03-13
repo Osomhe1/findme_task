@@ -11,7 +11,7 @@ export default function Memories() {
             </h1>
             <p className="text-gray-400 p-2">No memories</p>
           </div>
-          <div className="text-gray-400">
+          <div className="text-[#999999]">
             <h1>Manage</h1>
           </div>
         </div>
