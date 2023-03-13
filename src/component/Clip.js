@@ -147,39 +147,55 @@ export default function Clip() {
                   //   objectFit: 'cover',
                 }}
               >
-                <div className="top-[5%] absolute px-4 text-gray-400 text-lg flex w-full justify-between ">
+                <div className="top-[5%] absolute px-4 text-[#fff] text-lg flex w-full justify-between ">
                   <p className="w-[100%]  flex-grow ">{x.status} </p>
                 </div>
                 <div className="top-[15%] absolute px-4 text-gray-400 w-full flex items-center justify-between ">
                   <div className="">
-                    <img src={x.imgPic} className="w-6 h-6" alt="" />
+                    <img src={x.imgPic} className="w-[24px] h-[24px]" alt="" />
                   </div>
                   <p>
-                    <BsThreeDotsVertical className="text-2xl" />{' '}
+                    {/* <BsThreeDotsVertical className="text-2xl" />{' '} */}
+                    <svg
+                      width="3"
+                      height="18"
+                      viewBox="0 0 3 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.5 3C2.32843 3 3 2.32843 3 1.5C3 0.671573 2.32843 0 1.5 0C0.671573 0 0 0.671573 0 1.5C0 2.32843 0.671573 3 1.5 3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M1.5 11C2.32843 11 3 10.3284 3 9.5C3 8.67157 2.32843 8 1.5 8C0.671573 8 0 8.67157 0 9.5C0 10.3284 0.671573 11 1.5 11Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M1.5 18C2.32843 18 3 17.3284 3 16.5C3 15.6716 2.32843 15 1.5 15C0.671573 15 0 15.6716 0 16.5C0 17.3284 0.671573 18 1.5 18Z"
+                        fill="white"
+                      />
+                    </svg>
                   </p>
                 </div>
-                <div className="top-[60%] absolute px-4 text-gray-400 text-sm ">
+                <div className="top-[60%] absolute px-4 text-[#fff] text-sm ">
                   <p className="text-ce ">No caption Needed</p>
                   <p>{x.time} </p>
                 </div>
                 {x.seen ? (
                   <>
-                    <div className="top-[85%] text-md right-3 absolute text-gray-500">
+                    <div className="top-[85%] text-md right-3 absolute text-[#fff]">
                       {/* <BiShow className=" " /> */}
                       <BiShow className="mx-auto" />
                       <p className="text-gray-500  ">{x?.views} view </p>
                     </div>
                   </>
-                ) : //   <BsCircle className="text-[#D9D9D9] p-5 " />
+                ) : 
                 null}
 
                 <div className="bg-[#D9D9D inner_wrapp rounded-b-2xl absolute  lg:h-[5rem] ">
                   <div className=" text-center items-center mx-3">
                     <div className="m-o">
-                      {/* <h6 className="text-sm">Andres P. Conley</h6>
-                      <p className="text-sm">Lekki, Lagos</p>
-                      <p className="text-sm">25 Years Old</p>
-                      <p className="text-sm">Active 26 minutes ago</p> */}
                     </div>
                   </div>
                 </div>
