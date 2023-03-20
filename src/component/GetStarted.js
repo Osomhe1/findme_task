@@ -5,8 +5,8 @@ export default function GetStarted() {
   return (
     <div>
       <section className="bg-[#F5F5F5] min-h-screen ">
-        <div className="p-8 md:mx-10">
-          <div className=" hidden md:grid ">
+        <div className="p-4 md:p-8 md:mx-10">
+          <div className="  md:grid ">
             <svg
               width="32"
               height="26"
@@ -26,7 +26,7 @@ export default function GetStarted() {
           </div>
           {/* mobile view */}
           <div className="grid md:hidden">
-            <div className="font-bold  text-[#2B365A] text-[28px]  leading-loose  ">
+            <div className="font-bold  text-[#2B365A] text-[20px]  leading-loose  ">
               <h1>Let’s Get started</h1>
             </div>
             <div className=" md:py-6">
@@ -38,7 +38,7 @@ export default function GetStarted() {
         </div>
         <div className="flex flex-wrap justify-around items-center w-[90% m-auto ">
           <div className="">
-            <img src={bro} alt="" />
+            <img src={bro} className="w-[300px] md:w-full" alt="" />
           </div>
           <div className=" md:text-center  ">
             <div className=" hidden md:grid">
@@ -52,21 +52,21 @@ export default function GetStarted() {
               </div>
             </div>
 
-            <div className="py-6">
-              <div className="py-4">
-                <button className="bg-[#2B365A] text-[24px] p-3 md:p-4 fonts-bold rounded-[5px] md:rounded-[13px] w-[318px] md:w-[427px] text-white ">
+            <div className="py-2">
+              <div className="py-2">
+                <button className="bg-[#2B365A] md:text-[24px] text-[16px] p-2 md:p-4 fonts-bold rounded-[5px] md:rounded-[13px] w-[318px] md:w-[427px] text-white ">
                   Sign Up as a Vendor
                 </button>
               </div>
-              <div className="py-4">
-                <button className="text-[#2B365A] border-2 border-[#2B365A] text-[24px] p-3 md:p-4 fonts-bold rounded-[5px] md:rounded-[13px] w-[318px] md:w-[427px] bg-white ">
+              <div className="py-2">
+                <button className="text-[#2B365A] border-2 border-[#2B365A] md:text-[24px] text-[16px] p-2 md:p-4 fonts-bold rounded-[5px] md:rounded-[13px] w-[318px] md:w-[427px] bg-white ">
                   Sign Up as a User
                 </button>
               </div>
             </div>
           </div>
           {/* mobile view */}
-          <div className=" block py-8 md:hidden">
+          <div className=" block  md:hidden">
             <div className=" py-4">
               <svg
                 width="327"
