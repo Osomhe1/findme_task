@@ -13,6 +13,7 @@ import Insight from './Insight'
 import User from './User'
 import Clip from './Clip'
 import group from './images/Group_5775.png'
+import { Link } from 'react-router-dom'
 
 const imgPic = `https://images.unsplash.com/photo-1678101629507-10cb3ba27fd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8UzRNS0xBc0JCNzR8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60`
 
@@ -139,12 +140,28 @@ export default function Home() {
       {/* section 2 */}
       <section className="flex items-center justify-between m-2">
         <div className=" text-2xl">
-          <BiArrowBack />
+          <Link to="/">
+            <svg
+              width="46"
+              height="46"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M37.6064 23.0769C37.6064 23.7909 37.0759 24.3809 36.3876 24.4743L36.1962 24.4871L7.99226 24.4871C7.21342 24.4871 6.58206 23.8558 6.58206 23.0769C6.58206 22.363 7.11258 21.773 7.8009 21.6796L7.99226 21.6667L36.1962 21.6667C36.9751 21.6667 37.6064 22.2981 37.6064 23.0769Z"
+                fill="#2B365A"
+              />
+              <path
+                d="M20.3622 33.4061C20.9141 33.9556 20.916 34.8485 20.3665 35.4004C19.8669 35.9021 19.0835 35.9493 18.5306 35.5409L18.3721 35.4047L6.99652 24.078C6.4933 23.5769 6.44752 22.7907 6.85921 22.2378L6.99644 22.0794L18.372 10.7508C18.9239 10.2012 19.8168 10.2031 20.3664 10.7549C20.866 11.2566 20.9099 12.0402 20.4991 12.5914L20.3622 12.7493L9.99063 23.0792L20.3622 33.4061Z"
+                fill="#2B365A"
+              />
+            </svg>
+          </Link>
         </div>
         <div className=" flex items-center justify-between ">
           <div className=" text-2xl flex gap-4 lg:gap-16 justify-between items-center ">
             <div className="">
-              {/* <AiFillHome className="text-gradient-to-t from-[#6C63FF]  to-[#FF3D00]" /> */}
               <svg
                 width="28"
                 height="28"

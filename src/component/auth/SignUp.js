@@ -24,24 +24,24 @@ export default function SignUp() {
     <div>
       <section className="p-3">
         <div className=" px-8 md:p-8 md:mx-10  ">
-            <Link to='/' >
-          <svg
-            width="46"
-            height="46"
-            viewBox="0 0 46 46"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M37.6064 23.0769C37.6064 23.7909 37.0759 24.3809 36.3876 24.4743L36.1962 24.4871L7.99226 24.4871C7.21342 24.4871 6.58206 23.8558 6.58206 23.0769C6.58206 22.363 7.11258 21.773 7.8009 21.6796L7.99226 21.6667L36.1962 21.6667C36.9751 21.6667 37.6064 22.2981 37.6064 23.0769Z"
-              fill="#2B365A"
-            />
-            <path
-              d="M20.3622 33.4061C20.9141 33.9556 20.916 34.8485 20.3665 35.4004C19.8669 35.9021 19.0835 35.9493 18.5306 35.5409L18.3721 35.4047L6.99652 24.078C6.4933 23.5769 6.44752 22.7907 6.85921 22.2378L6.99644 22.0794L18.372 10.7508C18.9239 10.2012 19.8168 10.2031 20.3664 10.7549C20.866 11.2566 20.9099 12.0402 20.4991 12.5914L20.3622 12.7493L9.99063 23.0792L20.3622 33.4061Z"
-              fill="#2B365A"
-            />
-          </svg>
-            </Link>
+          <Link to="/">
+            <svg
+              width="46"
+              height="46"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M37.6064 23.0769C37.6064 23.7909 37.0759 24.3809 36.3876 24.4743L36.1962 24.4871L7.99226 24.4871C7.21342 24.4871 6.58206 23.8558 6.58206 23.0769C6.58206 22.363 7.11258 21.773 7.8009 21.6796L7.99226 21.6667L36.1962 21.6667C36.9751 21.6667 37.6064 22.2981 37.6064 23.0769Z"
+                fill="#2B365A"
+              />
+              <path
+                d="M20.3622 33.4061C20.9141 33.9556 20.916 34.8485 20.3665 35.4004C19.8669 35.9021 19.0835 35.9493 18.5306 35.5409L18.3721 35.4047L6.99652 24.078C6.4933 23.5769 6.44752 22.7907 6.85921 22.2378L6.99644 22.0794L18.372 10.7508C18.9239 10.2012 19.8168 10.2031 20.3664 10.7549C20.866 11.2566 20.9099 12.0402 20.4991 12.5914L20.3622 12.7493L9.99063 23.0792L20.3622 33.4061Z"
+                fill="#2B365A"
+              />
+            </svg>
+          </Link>
         </div>
         <div className="flex flex-wrap justify-between gap-2 items-center w-[80%] m-auto ">
           <div className="shadow-2xl text-center p-12 hidden w-1/2 lg:block m-aut ">
@@ -230,7 +230,7 @@ export default function SignUp() {
               </p>
               <div className="mb-8 py-2">
                 <button className="text-[#2B365A] font-bold border-2 border-[#2B365A] p-3 rounded-[8px] w-[281px] ">
-                  <Link to='/login' >Login</Link>
+                  <Link to="/login">Login</Link>
                 </button>
               </div>
             </div>
@@ -395,7 +395,7 @@ export default function SignUp() {
                       </label>
                     </div>
                     <button className="bg-[#2B365A] text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] w-[281px] ">
-                      Register
+                      <Link to="/dashboard">Register</Link>
                     </button>
                   </form>
                   <div className=" block md:px-4  md:">
@@ -625,9 +625,9 @@ export default function SignUp() {
                       </div>
                     </div>
                     <div className="py-4 block md:hidden">
-                      <h3 className="text-[#2B365A] text-center m-auto font-semibold text-[16px] py-2  ">
+                      <Link to='/login' className="text-[#2B365A] text-center m-auto font-semibold text-[16px] py-2  ">
                         Already have an Account? Login
-                      </h3>
+                      </Link >
                     </div>
                   </div>
                 </div>
