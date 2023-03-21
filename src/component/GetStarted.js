@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import bro from './images/Subscriber-bro-1.png'
 
 export default function GetStarted() {
@@ -7,22 +8,24 @@ export default function GetStarted() {
       <section className="bg-[#F5F5F5] min-h-screen ">
         <div className="p-4 md:p-8 md:mx-10">
           <div className="  md:grid ">
-            <svg
-              width="32"
-              height="26"
-              viewBox="0 0 32 26"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M31.6064 13.0768C31.6064 13.7908 31.0759 14.3808 30.3876 14.4742L30.1962 14.487L1.99226 14.487C1.21342 14.487 0.582058 13.8557 0.582058 13.0768C0.582058 12.3629 1.11258 11.7729 1.8009 11.6795L1.99226 11.6666L30.1962 11.6666C30.9751 11.6666 31.6064 12.298 31.6064 13.0768Z"
-                fill="#2B365A"
-              />
-              <path
-                d="M14.3622 23.4061C14.9141 23.9556 14.916 24.8485 14.3665 25.4004C13.8669 25.9021 13.0835 25.9493 12.5306 25.5409L12.3721 25.4047L0.996524 14.078C0.493296 13.5769 0.447517 12.7907 0.859209 12.2378L0.996442 12.0794L12.372 0.750819C12.9239 0.201244 13.8168 0.203092 14.3664 0.754948C14.866 1.25664 14.9099 2.04017 14.4991 2.59139L14.3622 2.74927L3.99063 13.0792L14.3622 23.4061Z"
-                fill="#2B365A"
-              />
-            </svg>
+            <Link to="/">
+              <svg
+                width="32"
+                height="26"
+                viewBox="0 0 32 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M31.6064 13.0768C31.6064 13.7908 31.0759 14.3808 30.3876 14.4742L30.1962 14.487L1.99226 14.487C1.21342 14.487 0.582058 13.8557 0.582058 13.0768C0.582058 12.3629 1.11258 11.7729 1.8009 11.6795L1.99226 11.6666L30.1962 11.6666C30.9751 11.6666 31.6064 12.298 31.6064 13.0768Z"
+                  fill="#2B365A"
+                />
+                <path
+                  d="M14.3622 23.4061C14.9141 23.9556 14.916 24.8485 14.3665 25.4004C13.8669 25.9021 13.0835 25.9493 12.5306 25.5409L12.3721 25.4047L0.996524 14.078C0.493296 13.5769 0.447517 12.7907 0.859209 12.2378L0.996442 12.0794L12.372 0.750819C12.9239 0.201244 13.8168 0.203092 14.3664 0.754948C14.866 1.25664 14.9099 2.04017 14.4991 2.59139L14.3622 2.74927L3.99063 13.0792L14.3622 23.4061Z"
+                  fill="#2B365A"
+                />
+              </svg>
+            </Link>
           </div>
           {/* mobile view */}
           <div className="grid md:hidden">
@@ -55,12 +58,12 @@ export default function GetStarted() {
             <div className="py-2">
               <div className="py-2">
                 <button className="bg-[#2B365A] md:text-[24px] text-[16px] p-2 md:p-4 fonts-bold rounded-[5px] md:rounded-[13px] w-[318px] md:w-[427px] text-white ">
-                  Sign Up as a Vendor
+                  <Link to="/signup">Sign Up as a Vendor</Link>
                 </button>
               </div>
               <div className="py-2">
                 <button className="text-[#2B365A] border-2 border-[#2B365A] md:text-[24px] text-[16px] p-2 md:p-4 fonts-bold rounded-[5px] md:rounded-[13px] w-[318px] md:w-[427px] bg-white ">
-                  Sign Up as a User
+                  <Link to="/signup">Sign Up as a User</Link>
                 </button>
               </div>
             </div>
