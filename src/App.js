@@ -5,6 +5,9 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import SignUp from './component/auth/SignUp';
 import Login from './component/auth/Login';
 import Recovery from './component/auth/Recovery'
+import PhoneRecovery from './component/auth/PhoneRecovery';
+import CallRecovery from './component/auth/CallRecovery';
+import ForgetPassword from './component/auth/ForgetPassword';
 
 
 function App() {
@@ -18,6 +21,9 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/recovery" element={<Recovery />} />
+          <Route path="/phone-recovery" element={<PhoneRecovery />} />
+          <Route path="/call-recovery" element={<CallRecovery />} />
+          <Route path="/forget-password" element={<ForgetPassword />} />
         </Routes>
       </BrowserRouter>
     </div>
