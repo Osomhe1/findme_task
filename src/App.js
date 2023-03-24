@@ -6,8 +6,10 @@ import SignUp from './component/auth/SignUp';
 import Login from './component/auth/Login';
 import Recovery from './component/auth/Recovery'
 import PhoneRecovery from './component/auth/PhoneRecovery';
-import CallRecovery from './component/auth/CallRecovery';
+import EmailRecovery from './component/auth/EmailRecovery';
 import ForgetPassword from './component/auth/ForgetPassword';
+import EmailRecoveryOtp from './component/auth/EmailRecoveryOtp';
+import NewPassword from './component/auth/NewPassword';
 
 
 function App() {
@@ -22,7 +24,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/recovery" element={<Recovery />} />
           <Route path="/phone-recovery" element={<PhoneRecovery />} />
-          <Route path="/call-recovery" element={<CallRecovery />} />
+          <Route path="/email-recovery" element={<EmailRecovery />} />
+          <Route path="/email-recovery-otp" element={<EmailRecoveryOtp />} />
+          <Route path="/new-password" element={<NewPassword />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
         </Routes>
       </BrowserRouter>

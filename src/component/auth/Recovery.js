@@ -39,6 +39,8 @@ export default function Recovery() {
 
             <div className="">
               <div className="flex gap-4 items-center justify-between w-full border-[#999999] p-3 my-4 border-b-2 border-t-2 ">
+                <Link to="/email-recovery">
+
                 <div className="py-4">
                   <h1 className="text-[#2B365A] font-bold text-[15px] ">
                     Email recovery{' '}
@@ -47,6 +49,7 @@ export default function Recovery() {
                     Recovery code would be sent to williamdavid@gmail.com
                   </p>
                 </div>
+                </Link>
                 <div className="">
                   <svg
                     width="28"
@@ -66,15 +69,15 @@ export default function Recovery() {
                 </div>
               </div>
               <div className="flex gap-4 items-center justify-between w-full border-[#999999] p-3 my-4 border-b-2  ">
-                <Link to='/phone-recovery'>
-                <div className="py-4">
-                  <h1 className="text-[#2B365A] font-bold text-[15px] ">
-                    Phone recovery
-                  </h1>
-                  <p className="text-[#787878] text-[14px] font-medium ">
-                    Recovery code would be sent to +23460xxxx7890
-                  </p>
-                </div>
+                <Link to="/phone-recovery">
+                  <div className="py-4">
+                    <h1 className="text-[#2B365A] font-bold text-[15px] ">
+                      Phone recovery
+                    </h1>
+                    <p className="text-[#787878] text-[14px] font-medium ">
+                      Recovery code would be sent to +23460xxxx7890
+                    </p>
+                  </div>
                 </Link>
                 <div className="">
                   <svg

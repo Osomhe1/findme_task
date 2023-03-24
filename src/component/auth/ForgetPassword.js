@@ -352,9 +352,9 @@ export default function ForgetPassword() {
                   <h3 className="text-[#787878] text-[22px] font-semibold ">
                     Phone
                   </h3>
-                <p className="text-[#2B365A]  text-[16px] font-medium ">
-                  Recover account using Phone number
-                </p>
+                  <p className="text-[#2B365A]  text-[16px] font-medium ">
+                    Recover account using Phone number
+                  </p>
                 </div>
                 <p className="max-w-[400px] text-[#787878] text-[15px] ">
                   A text message has been sent to{' '}
@@ -374,7 +374,7 @@ export default function ForgetPassword() {
                     </div>
                     <div className="pt-6">
                       <button className="bg-[#2B365A] text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] md:w-full w-[281px] ">
-                        <Link to="/dashboard">Recover</Link>
+                        <Link to="/new-password">Recover</Link>
                       </button>
                     </div>
                   </form>
