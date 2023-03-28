@@ -224,10 +224,10 @@ export default function Verify() {
                   <h1 className="text-[#2B365A] py-3 hidden md:block font-bold text-[32px] ">
                     Verification Code
                   </h1>
-                  <p className="text-[#787878] text-[16px] font- text-center py-2 md:py-4 md:mb-8 ">
+                  <p className="text-[#787878] text-[16px] max-w-[300px] font- text-center py-2 md:py-2 md:mb-4 ">
                     We have sent the verification code to your Mobile Number
                   </p>
-                  <div className="flex gap-2 items-center justify-center md:mb-4 md:pb-6 ">
+                  <div className="flex gap-2 items-center justify-center md:mb-2 md:pb-3 ">
                     <p className="text-[#2B365A]  text-[16px] font-medium ">
                       +234 8034 345 3456{' '}
                     </p>
@@ -283,7 +283,7 @@ export default function Verify() {
                       <OtpBox />
                     </div>
                     <div className="mt- md:mt-0 pt-6">
-                      <button className="bg-[#2B365A] text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] md:w-full w-[281px] ">
+                      <button className="bg-[#2B365A] ease-in-out transition hover:-translate-y-1 delay-150 duration-300 hover:scale-110 text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] md:w-full w-[281px] ">
                         <Link to="/success">Submit & Continue</Link>
                       </button>
                     </div>

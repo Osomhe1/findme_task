@@ -421,7 +421,7 @@ const [selectedValue, setSelectedValue] = useState('option1')
                       />
                     </div>
                     <div className="pt-6">
-                      <button className="bg-[#2B365A] text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] md:w-full w-[281px] ">
+                      <button className="bg-[#2B365A] ease-in-out transition hover:-translate-y-1 delay-150 duration-300 hover:scale-110 text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] md:w-full w-[281px] ">
                         <Link to="/forget-password">Recover</Link>
                       </button>
                     </div>

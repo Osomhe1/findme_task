@@ -26,8 +26,8 @@ export default function Login() {
         <div className=" px-8 md:p-8 md:mx-10  ">
           <Link to="/">
             <svg
-              width="46"
-              height="46"
+              width="36"
+              height="36"
               viewBox="0 0 46 46"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export default function Login() {
             </svg>
           </Link>
         </div>
-        <div className="flex flex-wrap justify-between gap-2 items-center w-[80%] m-auto ">
+        <div className="flex flex-wrap justify-between gap-2 items-cente w-[80%] m-auto ">
           <div className="shadow-2xl text-center p-12 hidden w-1/2 order-2 lg:block m-aut ">
             <div className=" p-8 px-28">
               <svg
@@ -182,7 +182,7 @@ export default function Login() {
                 Get started by creating your new account
               </p>
               <div className="mb-8 py-2">
-                <button className="text-[#2B365A] font-bold border-2 border-[#2B365A] p-3 rounded-[8px] w-[281px] ">
+                <button className="text-[#2B365A] ease-in-out transition hover:-translate-y-1 delay-150 duration-300 hover:scale-110 font-bold border-2 border-[#2B365A] p-3 rounded-[8px] w-[281px] ">
                   <Link to="/signup">Register</Link>
                 </button>
               </div>
@@ -338,29 +338,10 @@ export default function Login() {
                           onChange={handlePasswordChange}
                         />
                         <div
-                          className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                          className="absolute inset-y-0 right-0 pr-4 flex items-center cursor-pointer"
                           onClick={togglePasswordVisibility}
                         >
                           {passwordVisible ? (
-                            <svg
-                              width="28"
-                              height="28"
-                              viewBox="0 0 28 28"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <g opacity="0.4">
-                                <path
-                                  d="M3.8457 4.58531L5.01426 3.41675L24.2443 22.6468L23.0758 23.8154L3.8457 4.58531ZM14.2225 10.2207L17.44 13.4383C17.3953 12.5994 17.042 11.8067 16.448 11.2127C15.854 10.6187 15.0613 10.2654 14.2225 10.2207ZM13.8676 17.0106L10.6501 13.7931C10.6948 14.6319 11.0481 15.4246 11.6421 16.0186C12.2361 16.6126 13.0288 16.9659 13.8676 17.0106Z"
-                                  fill="#2B365A"
-                                />
-                                <path
-                                  d="M14.045 18.7159C13.2604 18.716 12.4865 18.535 11.7833 18.1871C11.0801 17.8392 10.4667 17.3338 9.99073 16.7101C9.51478 16.0864 9.18914 15.3613 9.03915 14.5913C8.88916 13.8212 8.91886 13.0269 9.12595 12.2702L5.45687 8.60062C3.95833 9.97327 2.53043 11.7645 1.2959 13.6163C2.69936 15.9536 4.61915 18.3568 6.61863 19.7348C8.9124 21.3146 11.4064 22.1157 14.0322 22.1157C15.4672 22.1167 16.8914 21.8686 18.2415 21.3826L15.3937 18.5353C14.9542 18.6556 14.5006 18.7164 14.045 18.7159ZM14.045 8.51669C14.8295 8.51665 15.6035 8.69763 16.3066 9.04553C17.0098 9.39343 17.6232 9.89888 18.0992 10.5225C18.5751 11.1462 18.9008 11.8713 19.0508 12.6413C19.2008 13.4114 19.1711 14.2057 18.964 14.9624L22.7175 18.7159C24.266 17.3215 25.696 15.4458 26.794 13.6163C25.3927 11.3093 23.4527 8.91191 21.4192 7.51695C19.0968 5.92438 16.6112 5.11694 14.0322 5.11694C12.613 5.11898 11.2058 5.3761 9.87761 5.87604L12.6989 8.6973C13.1375 8.57725 13.5902 8.51651 14.045 8.51669Z"
-                                  fill="#2B365A"
-                                />
-                              </g>
-                            </svg>
-                          ) : (
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -384,24 +365,43 @@ export default function Login() {
                                 />
                               </g>
                             </svg>
+                          ) : (
+                            <svg
+                              width="28"
+                              height="28"
+                              viewBox="0 0 28 28"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g opacity="0.4">
+                                <path
+                                  d="M3.8457 4.58531L5.01426 3.41675L24.2443 22.6468L23.0758 23.8154L3.8457 4.58531ZM14.2225 10.2207L17.44 13.4383C17.3953 12.5994 17.042 11.8067 16.448 11.2127C15.854 10.6187 15.0613 10.2654 14.2225 10.2207ZM13.8676 17.0106L10.6501 13.7931C10.6948 14.6319 11.0481 15.4246 11.6421 16.0186C12.2361 16.6126 13.0288 16.9659 13.8676 17.0106Z"
+                                  fill="#2B365A"
+                                />
+                                <path
+                                  d="M14.045 18.7159C13.2604 18.716 12.4865 18.535 11.7833 18.1871C11.0801 17.8392 10.4667 17.3338 9.99073 16.7101C9.51478 16.0864 9.18914 15.3613 9.03915 14.5913C8.88916 13.8212 8.91886 13.0269 9.12595 12.2702L5.45687 8.60062C3.95833 9.97327 2.53043 11.7645 1.2959 13.6163C2.69936 15.9536 4.61915 18.3568 6.61863 19.7348C8.9124 21.3146 11.4064 22.1157 14.0322 22.1157C15.4672 22.1167 16.8914 21.8686 18.2415 21.3826L15.3937 18.5353C14.9542 18.6556 14.5006 18.7164 14.045 18.7159ZM14.045 8.51669C14.8295 8.51665 15.6035 8.69763 16.3066 9.04553C17.0098 9.39343 17.6232 9.89888 18.0992 10.5225C18.5751 11.1462 18.9008 11.8713 19.0508 12.6413C19.2008 13.4114 19.1711 14.2057 18.964 14.9624L22.7175 18.7159C24.266 17.3215 25.696 15.4458 26.794 13.6163C25.3927 11.3093 23.4527 8.91191 21.4192 7.51695C19.0968 5.92438 16.6112 5.11694 14.0322 5.11694C12.613 5.11898 11.2058 5.3761 9.87761 5.87604L12.6989 8.6973C13.1375 8.57725 13.5902 8.51651 14.045 8.51669Z"
+                                  fill="#2B365A"
+                                />
+                              </g>
+                            </svg>
                           )}
                         </div>
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between w-full md:w-[370px] py- mb-8 ">
+                    <div className="flex items-center justify-between w-full md:w-[370px] py- mb-3 ">
                       <div className=""></div>
-                      <Link to='/recovery'>
-                      <p className=" p- relative left-  text-[#2B365A]     ">
-                        Forgot password?
-                      </p>
+                      <Link to="/recovery">
+                        <p className=" p- relative left-  text-[#2B365A]     ">
+                          Forgot password?
+                        </p>
                       </Link>
                     </div>
-                    <button className="bg-[#2B365A] text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] w-[281px] ">
+                    <button className="bg-[#2B365A] ease-in-out transition hover:-translate-y-1 delay-150 duration-300 hover:scale-110 text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] w-[281px] ">
                       <Link to="/dashboard">Login</Link>
                     </button>
                   </form>
-                  <div className=" block md:px-4 mt-6  md:">
+                  <div className=" block md:px-4 mt-4  md:">
                     <div className=" py-4">
                       <svg
                         width="327"
@@ -424,206 +424,59 @@ export default function Login() {
                         />
                       </svg>
                     </div>
-                    <div className="flex gap-2">
-                      <div className="">
+                    <div className="flex gap-4 ">
+                      <div className=" bg-white px-8 p-5 shadow-xl ">
                         <svg
-                          width="106"
-                          height="64"
-                          viewBox="0 0 106 64"
+                          width="38"
+                          height="38"
+                          viewBox="0 0 28 28"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <g filter="url(#filter0_d_2366_15407)">
-                            <rect
-                              x="4"
-                              width="98"
-                              height="56"
-                              rx="6"
-                              fill="white"
-                            />
-                          </g>
                           <path
-                            d="M62.8055 26.0415H62V26H53V30H58.6515C57.827 32.3285 55.6115 34 53 34C49.6865 34 47 31.3135 47 28C47 24.6865 49.6865 22 53 22C54.5295 22 55.921 22.577 56.9805 23.5195L59.809 20.691C58.023 19.0265 55.634 18 53 18C47.4775 18 43 22.4775 43 28C43 33.5225 47.4775 38 53 38C58.5225 38 63 33.5225 63 28C63 27.3295 62.931 26.675 62.8055 26.0415Z"
+                            d="M24.9917 12.0029H24.1025V11.957H14.1667V16.373H20.4058C19.4956 18.9436 17.0497 20.7889 14.1667 20.7889C10.5087 20.7889 7.54286 17.823 7.54286 14.165C7.54286 10.507 10.5087 7.54115 14.1667 7.54115C15.8552 7.54115 17.3914 8.17814 18.5611 9.21864L21.6837 6.09604C19.712 4.25848 17.0746 3.12524 14.1667 3.12524C8.07 3.12524 3.12695 8.0683 3.12695 14.165C3.12695 20.2617 8.07 25.2048 14.1667 25.2048C20.2634 25.2048 25.2065 20.2617 25.2065 14.165C25.2065 13.4248 25.1303 12.7022 24.9917 12.0029Z"
                             fill="#FFC107"
                           />
                           <path
-                            d="M44.1533 23.3455L47.4388 25.755C48.3278 23.554 50.4808 22 53.0003 22C54.5298 22 55.9213 22.577 56.9808 23.5195L59.8093 20.691C58.0233 19.0265 55.6343 18 53.0003 18C49.1593 18 45.8283 20.1685 44.1533 23.3455Z"
+                            d="M4.39941 9.02654L8.02653 11.6866C9.00796 9.25672 11.3848 7.54115 14.1663 7.54115C15.8548 7.54115 17.391 8.17814 18.5607 9.21864L21.6833 6.09604C19.7116 4.25847 17.0742 3.12524 14.1663 3.12524C9.92592 3.12524 6.24857 5.51921 4.39941 9.02654Z"
                             fill="#FF3D00"
                           />
                           <path
-                            d="M53.0002 38.0001C55.5832 38.0001 57.9302 37.0116 59.7047 35.4041L56.6097 32.7851C55.5719 33.5743 54.3039 34.0011 53.0002 34.0001C50.3992 34.0001 48.1907 32.3416 47.3587 30.0271L44.0977 32.5396C45.7527 35.7781 49.1137 38.0001 53.0002 38.0001Z"
+                            d="M14.167 25.2082C17.0186 25.2082 19.6096 24.117 21.5686 22.3423L18.1518 19.451C17.0062 20.3223 15.6063 20.7935 14.167 20.7923C11.2956 20.7923 8.85744 18.9614 7.93893 16.4062L4.33887 19.18C6.16595 22.7552 9.87641 25.2082 14.167 25.2082Z"
                             fill="#4CAF50"
                           />
                           <path
-                            d="M62.8055 26.0415H62V26H53V30H58.6515C58.2571 31.1082 57.5467 32.0766 56.608 32.7855L56.6095 32.7845L59.7045 35.4035C59.4855 35.6025 63 33 63 28C63 27.3295 62.931 26.675 62.8055 26.0415Z"
+                            d="M24.992 12.0033H24.1028V11.9575H14.167V16.3734H20.4061C19.9707 17.5969 19.1864 18.6659 18.1501 19.4485L18.1518 19.4474L21.5686 22.3388C21.3268 22.5584 25.2067 19.6853 25.2067 14.1655C25.2067 13.4253 25.1306 12.7027 24.992 12.0033Z"
                             fill="#1976D2"
                           />
-                          <defs>
-                            <filter
-                              id="filter0_d_2366_15407"
-                              x="0"
-                              y="0"
-                              width="106"
-                              height="64"
-                              filterUnits="userSpaceOnUse"
-                              color-interpolation-filters="sRGB"
-                            >
-                              <feFlood
-                                flood-opacity="0"
-                                result="BackgroundImageFix"
-                              />
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              />
-                              <feOffset dy="4" />
-                              <feGaussianBlur stdDeviation="2" />
-                              <feComposite in2="hardAlpha" operator="out" />
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                              />
-                              <feBlend
-                                mode="normal"
-                                in2="BackgroundImageFix"
-                                result="effect1_dropShadow_2366_15407"
-                              />
-                              <feBlend
-                                mode="normal"
-                                in="SourceGraphic"
-                                in2="effect1_dropShadow_2366_15407"
-                                result="shape"
-                              />
-                            </filter>
-                          </defs>
                         </svg>
                       </div>
-                      <div className="">
+                      <div className="bg-white px-8 p-5 shadow-xl ">
                         <svg
-                          width="106"
-                          height="64"
-                          viewBox="0 0 106 64"
+                          width="36"
+                          height="36"
+                          viewBox="0 0 36 36"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <g filter="url(#filter0_d_2366_15414)">
-                            <rect
-                              x="4"
-                              width="98"
-                              height="56"
-                              rx="6"
-                              fill="white"
-                            />
-                          </g>
                           <path
-                            d="M61.9465 38.0001C60.8398 39.6534 59.6665 41.2667 57.8798 41.2934C56.0931 41.3334 55.5198 40.2401 53.4931 40.2401C51.4531 40.2401 50.8265 41.2667 49.1331 41.3334C47.3865 41.4001 46.0665 39.5734 44.9465 37.9601C42.6665 34.6667 40.9198 28.6001 43.2665 24.5201C44.4265 22.4934 46.5065 21.2134 48.7598 21.1734C50.4665 21.1467 52.0931 22.3334 53.1465 22.3334C54.1865 22.3334 56.1598 20.9067 58.2265 21.1201C59.0931 21.1601 61.5198 21.4667 63.0798 23.7601C62.9598 23.8401 60.1865 25.4667 60.2131 28.8401C60.2531 32.8667 63.7465 34.2134 63.7865 34.2267C63.7465 34.3201 63.2265 36.1467 61.9465 38.0001ZM54.3331 16.6667C55.3065 15.5601 56.9198 14.7201 58.2531 14.6667C58.4265 16.2267 57.7998 17.8001 56.8665 18.9201C55.9465 20.0534 54.4265 20.9334 52.9331 20.8134C52.7331 19.2801 53.4798 17.6801 54.3331 16.6667Z"
-                            fill="#2B365A"
+                            d="M27.8981 29.2069C26.6764 31.0322 25.3811 32.8133 23.4086 32.8427C21.4362 32.8869 20.8032 31.6798 18.5659 31.6798C16.3137 31.6798 15.6219 32.8133 13.7525 32.8868C11.8242 32.9604 10.367 30.9439 9.13054 29.1628C6.61347 25.527 4.6852 18.8296 7.27586 14.3253C8.55647 12.088 10.8527 10.6749 13.3404 10.6307C15.2245 10.6013 17.0203 11.9113 18.1831 11.9113C19.3313 11.9113 21.5098 10.3363 23.7913 10.5718C24.7481 10.616 27.4271 10.9545 29.1493 13.4863C29.0168 13.5746 25.9551 15.3704 25.9846 19.0945C26.0287 23.5399 29.8853 25.0265 29.9294 25.0413C29.8853 25.1443 29.3112 27.1609 27.8981 29.2069ZM19.4932 5.65546C20.5677 4.43373 22.3488 3.50639 23.8208 3.44751C24.0121 5.16971 23.3203 6.90663 22.2899 8.14308C21.2743 9.39426 19.5962 10.3658 17.9476 10.2333C17.7268 8.54052 18.5511 6.77416 19.4932 5.65546Z"
+                            fill="black"
                           />
-                          <defs>
-                            <filter
-                              id="filter0_d_2366_15414"
-                              x="0"
-                              y="0"
-                              width="106"
-                              height="64"
-                              filterUnits="userSpaceOnUse"
-                              color-interpolation-filters="sRGB"
-                            >
-                              <feFlood
-                                flood-opacity="0"
-                                result="BackgroundImageFix"
-                              />
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              />
-                              <feOffset dy="4" />
-                              <feGaussianBlur stdDeviation="2" />
-                              <feComposite in2="hardAlpha" operator="out" />
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                              />
-                              <feBlend
-                                mode="normal"
-                                in2="BackgroundImageFix"
-                                result="effect1_dropShadow_2366_15414"
-                              />
-                              <feBlend
-                                mode="normal"
-                                in="SourceGraphic"
-                                in2="effect1_dropShadow_2366_15414"
-                                result="shape"
-                              />
-                            </filter>
-                          </defs>
                         </svg>
                       </div>
-                      <div className="">
+                      <div className="bg-white px-8 p-5 shadow-xl ">
                         <svg
-                          width="106"
-                          height="64"
-                          viewBox="0 0 106 64"
+                          width="34"
+                          height="28"
+                          viewBox="0 0 14 28"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <g filter="url(#filter0_d_2366_15418)">
-                            <rect
-                              x="4"
-                              width="98"
-                              height="56"
-                              rx="6"
-                              fill="white"
-                            />
-                            <path
-                              d="M55.0867 39.9962V29.0682H58.7733L59.3213 24.7896H55.0867V22.0642C55.0867 20.8296 55.4307 19.9842 57.2027 19.9842H59.448V16.1696C58.3555 16.0525 57.2574 15.9959 56.1587 16.0002C52.9 16.0002 50.6627 17.9896 50.6627 21.6416V24.7816H47V29.0602H50.6707V39.9962H55.0867Z"
-                              fill="#3960B7"
-                            />
-                          </g>
-                          <defs>
-                            <filter
-                              id="filter0_d_2366_15418"
-                              x="0"
-                              y="0"
-                              width="106"
-                              height="64"
-                              filterUnits="userSpaceOnUse"
-                              color-interpolation-filters="sRGB"
-                            >
-                              <feFlood
-                                flood-opacity="0"
-                                result="BackgroundImageFix"
-                              />
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              />
-                              <feOffset dy="4" />
-                              <feGaussianBlur stdDeviation="2" />
-                              <feComposite in2="hardAlpha" operator="out" />
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                              />
-                              <feBlend
-                                mode="normal"
-                                in2="BackgroundImageFix"
-                                result="effect1_dropShadow_2366_15418"
-                              />
-                              <feBlend
-                                mode="normal"
-                                in="SourceGraphic"
-                                in2="effect1_dropShadow_2366_15418"
-                                result="shape"
-                              />
-                            </filter>
-                          </defs>
+                          <path
+                            d="M9.1765 27.4087V15.3445H13.2465L13.8515 10.6209H9.1765V7.61224C9.1765 6.2492 9.55627 5.31597 11.5125 5.31597H13.9913V1.10467C12.7852 0.975417 11.5729 0.913009 10.36 0.917729C6.76248 0.917729 4.29252 3.1139 4.29252 7.14562V10.6121H0.249023L0.249023 15.3356H4.30135L4.30135 27.4087H9.1765Z"
+                            fill="#3960B7"
+                          />
                         </svg>
                       </div>
                     </div>
