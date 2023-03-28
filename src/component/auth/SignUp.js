@@ -22,12 +22,12 @@ export default function SignUp() {
 
   return (
     <div>
-      <section className="p-3">
+      <section className="md:p-3">
         <div className=" px-8 md:p-8 md:mx-10  ">
           <Link to="/">
             <svg
-              width="46"
-              height="46"
+              width="36"
+              height="36"
               viewBox="0 0 46 46"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ export default function SignUp() {
           </Link>
         </div>
         <div className="flex flex-wrap justify-between gap-2 items-center w-[80%] m-auto ">
-          <div className="shadow-2xl text-center p-12 hidden w-1/2 lg:block m-aut ">
+          <div className="shadow-2xl text-center p-12 hidden w-1/2 md:block m-aut ">
             <div className=" p-8 px-28">
               <svg
                 width="272"
@@ -238,7 +238,7 @@ export default function SignUp() {
 
           <div className="w-ful items-center m-aut ">
             <div className="text-center">
-              <h1 className="text-[#2B365A] font-bold text-[32px] ">
+              <h1 className="text-[#2B365A] font-semibold text-[27px] md:text-[32px] ">
                 Create Account
               </h1>
               <p className="text-[#011F32] opacity-30 text-[16px] font-medium ">
@@ -395,7 +395,7 @@ export default function SignUp() {
                       </label>
                     </div>
                     <button className="bg-[#2B365A] text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] w-[281px] ">
-                      <Link to="/dashboard">Register</Link>
+                      <Link to="/verify">Register</Link>
                     </button>
                   </form>
                   <div className=" block md:px-4  md:">
@@ -625,9 +625,12 @@ export default function SignUp() {
                       </div>
                     </div>
                     <div className="py-4 block md:hidden">
-                      <Link to='/login' className="text-[#2B365A] text-center m-auto font-semibold text-[16px] py-2  ">
+                      <Link
+                        to="/login"
+                        className="text-[#2B365A] text-center m-auto font-semibold text-[15px] py-2  "
+                      >
                         Already have an Account? Login
-                      </Link >
+                      </Link>
                     </div>
                   </div>
                 </div>

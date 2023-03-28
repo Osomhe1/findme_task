@@ -370,6 +370,9 @@ export default function ForgetPassword() {
                 <div className="p-">
                   <form>
                     <div className="">
+                      <p className="text-[#2B365A] text-[15px] font-medium py-2 ">
+                        Recovery code
+                      </p>
                       <OtpBox />
                     </div>
                     <div className="pt-6">

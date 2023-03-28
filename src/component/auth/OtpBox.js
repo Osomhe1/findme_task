@@ -25,15 +25,13 @@ export default function OtpBox() {
 
   return (
     <div className="">
-      <p className="text-[#2B365A] text-[15px] font-medium py-2 ">
-        Recovery code
-      </p>
+      
       <div className="flex justify-center">
         {otp.map((digit, index) => (
           <input
             type="text"
             maxLength="1"
-            className="w-14 h-14 mx-2 text-3xl bg-[#fff] text-[#2B365A] text-center border rounded-[8px] focus:outline-none focus:border-[#2B365A]"
+            className="w-14 h-14 mx-2 text-3xl bg-[#F5F5F5] text-[#2B365A] text-center border rounded-[8px] focus:outline-none focus:border-[#2B365A]"
             value={digit}
             onChange={(e) => handleChange(e, index)}
             onPaste={handlePaste}

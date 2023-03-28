@@ -10,6 +10,8 @@ import EmailRecovery from './component/auth/EmailRecovery';
 import ForgetPassword from './component/auth/ForgetPassword';
 import EmailRecoveryOtp from './component/auth/EmailRecoveryOtp';
 import NewPassword from './component/auth/NewPassword';
+import Verify from './component/auth/Verification';
+import Success from './component/auth/Success';
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
           <Route path="/email-recovery" element={<EmailRecovery />} />
           <Route path="/email-recovery-otp" element={<EmailRecoveryOtp />} />
           <Route path="/new-password" element={<NewPassword />} />
+          <Route path="/verify" element={<Verify />} />
+          <Route path="/success" element={<Success />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
         </Routes>
       </BrowserRouter>
