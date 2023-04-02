@@ -13,6 +13,9 @@ code {
     monospace;
 }
 
+.category_wrapper::-webkit-scrollbar { display: none;}
+/* Hide scrollbar for IE, Edge and Firefox /.category_wrapper { -ms-overflow-style: none; / IE and Edge / scrollbar-width: none; / Firefox } */
+
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */

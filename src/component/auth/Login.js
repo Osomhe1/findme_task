@@ -398,7 +398,7 @@ export default function Login() {
                       </Link>
                     </div>
                     <button className="bg-[#2B365A] ease-in-out transition hover:-translate-y-1 delay-150 duration-300 hover:scale-110 text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] w-[281px] ">
-                      <Link to="/dashboard">Login</Link>
+                      <Link to="/interest">Login</Link>
                     </button>
                   </form>
                   <div className=" block md:px-4 mt-4  md:">

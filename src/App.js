@@ -12,6 +12,7 @@ import EmailRecoveryOtp from './component/auth/EmailRecoveryOtp';
 import NewPassword from './component/auth/NewPassword';
 import Verify from './component/auth/Verification';
 import Success from './component/auth/Success';
+import Interest from './component/pages/Interest';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/verify" element={<Verify />} />
           <Route path="/success" element={<Success />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
+          <Route path="/interest" element={<Interest />} />
         </Routes>
       </BrowserRouter>
     </div>

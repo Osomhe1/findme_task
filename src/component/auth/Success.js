@@ -199,12 +199,12 @@ export default function Success() {
 
                   <div className=" hidden md:block md:mt-0">
                     <button className="bg-[#2B365A] text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] md:w-full w-[281px] ">
-                      <Link to="/new-password">Go to Survey</Link>
+                      <Link to="/interest">Go to Survey</Link>
                     </button>
                   </div>
                   <div className=" md:hidden mt-36 md:mt-0">
                     <button className="bg-[#2B365A] text-white ease-in-out transition hover:-translate-y-1 delay-150 duration-300 hover:scale-110 font-bold border-2 border-[#2B365A] p-3 rounded-[8px] md:w-full w-[300px] ">
-                      <Link to="/new-password">Let’s Go</Link>
+                      <Link to="/interest">Let’s Go</Link>
                     </button>
                   </div>
                 </div>
