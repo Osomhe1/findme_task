@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from '../Carousel'
 import TailwindInput from '../Input'
+import UserPage from '../UserPage'
 
 export default function Interest() {
   return (
@@ -25,6 +26,8 @@ export default function Interest() {
       <section className='container mx-4 '>
         <Carousel />
       </section>
+
+      {/* <UserPage /> */}
     </div>
   )
 }
