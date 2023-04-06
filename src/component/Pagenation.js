@@ -1,72 +1,105 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { usePagination, DOTS, ActiveDots } from './usePagination '
 
-const Pagination = ({ data, RenderComponent, title, pageLimit, dataLimit }) => {
-  const [pages] = useState(Math.round(data.length / dataLimit))
-  const [currentPage, setCurrentPage] = useState(1)
+const Pagination = (props) => {
+  const {
+    onPageChange,
+    totalCount,
+    siblingCount = 1,
+    currentPage,
+    pageSize,
+  } = props
 
-  function goToNextPage() {
-    setCurrentPage((page) => page + 1)
+  const paginationRange = usePagination({
+    currentPage,
+    totalCount,
+    siblingCount,
+    pageSize,
+  })
+
+  const [valid, setValid] = useState(false)
+
+  // If there are less than 2 times in pagination range we shall not render the component
+  if (currentPage === 0 || paginationRange.length < 2) {
+    return null
+  }
+ let lastPage = paginationRange[paginationRange.length - 1]
+
+  const onNext = () => {
+     if(currentPage === lastPage){
+      setValid(true)
+     }
+     else{
+
+       onPageChange(currentPage + 1)
+     }
   }
 
-  function goToPreviousPage() {
-    setCurrentPage((page) => page - 1)
+  const onPrevious = () => {
+    if (currentPage === 1) {
+      setValid(true)
+    }else{
+
+      onPageChange(currentPage - 1)
+    }
   }
 
-  function changePage(event) {
-    const pageNumber = Number(event.target.textContent)
-    setCurrentPage(pageNumber)
-  }
+ 
 
-  const getPaginatedData = () => {
-    const startIndex = currentPage * dataLimit - dataLimit
-    const endIndex = startIndex + dataLimit
-    return data.slice(startIndex, endIndex)
-  }
 
-  const getPaginationGroup = () => {
-    let start = Math.floor((currentPage - 1) / pageLimit) * pageLimit
-    return new Array(pageLimit).fill().map((_, idx) => start + idx + 1)
-  }
 
   return (
-    <div>
-      <h2>{title}</h2>
+    <ul
+      className={
+        'pagination-container cursor-pointer mt-2 py-2 flex flex-wrap justify-between gap-2'
+      }
+    >
+      {/* Left navigation arrow */}
+      <li
+        onClick={onPrevious}
+        disable={lastPage}
+        className={`border-[#2B365A] border-2 text-[#2B365A] font-bold text-[14px] text-center w-[300px] md:w-[130px] duration-300 delay-150 ease-in-out hover:translate-y-2 hover:translate-x-2 p-3 px-5  rounded-md  
+         ${currentPage ===1 ? 'invisible' : 'block'}`}
+      >
+        Previous
+      </li>
+      {/* {paginationRange.map((pageNumber) => {
+        // If the pageItem is a DOT, render the DOTS unicode character
+        if (pageNumber === DOTS) {
+          return (
+            <li
+              className=" text-orange-500 font-bold text-[25px] "
+              onClick={() => onPageChange(pageNumber)}
+            >
+              &#8230; {DOTS}
+            </li>
+          )
+        }
 
-      {/* show the data */}
-      <RenderComponent data={getPaginatedData()} />
+        // Render our Page Pills
+        return (
+          <div className="">
+            <li
+              className=''
+              onClick={() => onPageChange(pageNumber)}
+            >
+              {pageNumber === currentPage ? ActiveDots : DOTS}
+            </li>
+          </div>
+        )
+      })} */}
+      {/*  Right Navigation arrow */}
 
-      {/* show the pagination */}
-      <div className="pagination">
-        {/* previous button */}
-        <button
-          onClick={goToPreviousPage}
-          disabled={currentPage === 1 ? true : false}
-        >
-          prev
-        </button>
-
-        {/* show page numbers */}
-        {getPaginationGroup().map((item, index) => (
-          <button
-            key={index}
-            onClick={changePage}
-            className={`paginationItem ${
-              currentPage === item ? 'active' : null
-            }`}
-          >
-            <span>{item}</span>
-          </button>
-        ))}
-
-        {/* next button */}
-        <button
-          onClick={goToNextPage}
-          disabled={currentPage === pages ? true : false}
-        >
-          next
-        </button>
-      </div>
-    </div>
+      <li
+        className={
+          'bg-[#2B365A] text-white font-bold text-[14px] text-center w-[300px] md:w-[130px] duration-300 delay-150 ease-in-out hover:translate-y-2 hover:translate-x-2 p-3 px-5  rounded-md '
+        }
+        onClick={onNext}
+        disable={!valid}
+      >
+        Next
+      </li>
+    </ul>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const InterestCard = ({ imageUrl, title, description }) => {
   return (
-    <div className="max-w-[190px] mx-auto bg-black relative rounded-xl shadow-md overflow-hidden ">
+    <div className=" w-[150px] md:max-w-[190px] md:w-[190px] mx-auto bg-black relative rounded-xl shadow-md overflow-hidden ">
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           <img
