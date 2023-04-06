@@ -63,18 +63,18 @@ const Pagination = (props) => {
       >
         Previous
       </li>
-      {/* {paginationRange.map((pageNumber) => {
+      {paginationRange.map((pageNumber) => {
         // If the pageItem is a DOT, render the DOTS unicode character
-        if (pageNumber === DOTS) {
-          return (
-            <li
-              className=" text-orange-500 font-bold text-[25px] "
-              onClick={() => onPageChange(pageNumber)}
-            >
-              &#8230; {DOTS}
-            </li>
-          )
-        }
+        // if (pageNumber === DOTS) {
+        //   return (
+        //     <li
+        //       className=" text-orange-500 font-bold text-[25px] "
+        //       onClick={() => onPageChange(pageNumber)}
+        //     >
+        //       &#8230; {DOTS}
+        //     </li>
+        //   )
+        // }
 
         // Render our Page Pills
         return (
@@ -87,7 +87,7 @@ const Pagination = (props) => {
             </li>
           </div>
         )
-      })} */}
+      })}
       {/*  Right Navigation arrow */}
 
       <li
