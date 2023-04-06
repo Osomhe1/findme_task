@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import { usePagination, DOTS, ActiveDots } from './usePagination '
 
 const Pagination = (props) => {
@@ -51,54 +51,58 @@ const Pagination = (props) => {
   return (
     <ul
       className={
-        'pagination-container cursor-pointer mt-2 py-2 flex flex-wrap justify-between gap-2'
+        ' cursor-pointer mt-2 py-2  flex flex-wrap items-center   justify-between gap-2'
       }
     >
       {/* Left navigation arrow */}
-      <li
-        onClick={onPrevious}
-        disable={lastPage}
-        className={`border-[#2B365A] border-2 text-[#2B365A] font-bold text-[14px] text-center w-[300px] md:w-[130px] duration-300 delay-150 ease-in-out hover:translate-y-2 hover:translate-x-2 p-3 px-5  rounded-md  
-         ${currentPage ===1 ? 'invisible' : 'block'}`}
-      >
-        Previous
-      </li>
-      {paginationRange.map((pageNumber) => {
-        // If the pageItem is a DOT, render the DOTS unicode character
-        // if (pageNumber === DOTS) {
-        //   return (
-        //     <li
-        //       className=" text-orange-500 font-bold text-[25px] "
-        //       onClick={() => onPageChange(pageNumber)}
-        //     >
-        //       &#8230; {DOTS}
-        //     </li>
-        //   )
-        // }
+      <div className="w-[350px md:w-[130px] mx-aut ">
+        <li
+          onClick={onPrevious}
+          disable={lastPage}
+          className={`border-[#2B365A] border-2 text-[#2B365A] font-bold text-[14px] text-center w-full  duration-300 delay-150 ease-in-out hover:translate-y-2 hover:translate-x-2 p-3 px-5  rounded-md  
+         ${currentPage === 1 ? 'invisible' : 'block'}`}
+        >
+          Previous
+        </li>
+      </div>
 
-        // Render our Page Pills
-        return (
-          <div className="">
-            <li
-              className=''
-              onClick={() => onPageChange(pageNumber)}
-            >
-              {pageNumber === currentPage ? ActiveDots : DOTS}
-            </li>
-          </div>
-        )
-      })}
+      <div className="flex gap-2 items-center mr-40 md:mx-auto  w-[80px] md:w-[130px] ">
+        {paginationRange.map((pageNumber) => {
+          // If the pageItem is a DOT, render the DOTS unicode character
+          // if (pageNumber === DOTS) {
+          //   return (
+          //     <li
+          //       className=" text-orange-500 font-bold text-[25px] "
+          //       onClick={() => onPageChange(pageNumber)}
+          //     >
+          //       &#8230; {DOTS}
+          //     </li>
+          //   )
+          // }
+
+          // Render our Page Pills
+          return (
+            <div className=" ">
+              <li className="" onClick={() => onPageChange(pageNumber)}>
+                {pageNumber === currentPage ? ActiveDots : DOTS}
+              </li>
+            </div>
+          )
+        })}
+      </div>
       {/*  Right Navigation arrow */}
 
-      <li
-        className={
-          'bg-[#2B365A] text-white font-bold text-[14px] text-center w-[300px] md:w-[130px] duration-300 delay-150 ease-in-out hover:translate-y-2 hover:translate-x-2 p-3 px-5  rounded-md '
-        }
-        onClick={onNext}
-        disable={!valid}
-      >
-        Next
-      </li>
+      <div className=" w-[350px] mx-aut md:w-[130px]  ">
+        <li
+          className={
+            'bg-[#2B365A] text-white  font-bold text-[14px] text-center w-full  duration-300 delay-150 ease-in-out hover:translate-y-2 hover:translate-x-2 p-3 px-5  rounded-md '
+          }
+          onClick={onNext}
+          disable={!valid}
+        >
+          Next
+        </li>
+      </div>
     </ul>
   )
 }

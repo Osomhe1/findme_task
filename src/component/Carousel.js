@@ -40,7 +40,7 @@ const currentTableData = useMemo(() => {
           </div>
           {/* <Pagination /> */}
           <Pagination
-            className="pagination-bar"
+            className=""
             currentPage={currentPage}
             totalCount={data.length}
             pageSize={PageSize}

@@ -5,7 +5,7 @@ import TailwindInput from '../Input'
 export default function Interest() {
   return (
     <div>
-      <div className="w-[350px] md:w-full m-auto ">
+      <div className="w-[400px] md:w-full m-auto ">
 
       <section className=" max-h-screen m-auto container ">
         <div className="flex justify-between flex-wrap items-center px-2">
