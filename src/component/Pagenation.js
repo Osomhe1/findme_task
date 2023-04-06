@@ -55,18 +55,18 @@ const Pagination = (props) => {
       }
     >
       {/* Left navigation arrow */}
-      <div className="w-[350px md:w-[130px] mx-aut ">
+      <div className="w-[350px] md:w-[130px] mx-aut ">
         <li
           onClick={onPrevious}
           disable={lastPage}
           className={`border-[#2B365A] border-2 text-[#2B365A] font-bold text-[14px] text-center w-full  duration-300 delay-150 ease-in-out hover:translate-y-2 hover:translate-x-2 p-3 px-5  rounded-md  
-         ${currentPage === 1 ? 'invisible' : 'block'}`}
+         ${currentPage === 1 ? 'hidden' : 'block '}`}
         >
           Previous
         </li>
       </div>
 
-      <div className="flex gap-2 items-center mr-40 md:mx-auto  w-[80px] md:w-[130px] ">
+      <div className="flex gap-2 items-center mx-auto mr-40 md:mx-auto  w-[80px] md:w-[130px] ">
         {paginationRange.map((pageNumber) => {
           // If the pageItem is a DOT, render the DOTS unicode character
           // if (pageNumber === DOTS) {
