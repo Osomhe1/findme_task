@@ -1,23 +1,33 @@
 
-import { useMemo, useState } from 'react'
+import {  useMemo,  useState } from 'react'
 import InterestCard from './InterestCard'
 import Pagination from './Pagenation'
 import { data } from './utilities/data'
 
 
-let PageSize = 32
+// let PageSize = 32
+
 
 export default function Carousel() {
 
    const [currentPage, setCurrentPage] = useState(1)
 
+    const screenWidth = window.innerWidth
 
-const currentTableData = useMemo(() => {
-  const firstPageIndex = (currentPage - 1) * PageSize
-  const lastPageIndex = firstPageIndex + PageSize
-  return data.slice(firstPageIndex, lastPageIndex)
-}, [currentPage])
- 
+    // Adjust the number of items per page based on the screen size
+  const adjustedItemsPerPage =
+    screenWidth < 768 ? 10 : screenWidth < 900 ? 28 : screenWidth < 1281 ? 30 : 32
+
+   
+   
+  const currentTableData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * adjustedItemsPerPage
+    const lastPageIndex = firstPageIndex + adjustedItemsPerPage
+    return data.slice(firstPageIndex, lastPageIndex)
+  }, [currentPage])
+
+
+
 
   return (
     <div className="content">
@@ -38,15 +48,17 @@ const currentTableData = useMemo(() => {
               ))}
             </div>
           </div>
+
           {/* <Pagination /> */}
           <Pagination
             className=""
             currentPage={currentPage}
             totalCount={data.length}
-            pageSize={PageSize}
+            pageSize={adjustedItemsPerPage}
             onPageChange={(page) => setCurrentPage(page)}
           />
         </div>
+       
       </section>
     </div>
   )

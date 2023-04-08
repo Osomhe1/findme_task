@@ -10,10 +10,10 @@ export default function Interest() {
       <section className=" max-h-screen m-auto container ">
         <div className="flex justify-between flex-wrap items-center px-2">
           <div className="">
-            <h1 className="text-[#2B365A] text-[30px] md:text-[36px] font-semibold ">
+            <h1 className="text-[#2B365A] md:text-[30px] lg:text-[36px] font-semibold ">
               Interest Page
             </h1>
-            <p className="text-[#010101] text-[18px] md:text-[21px] font-light ">
+            <p className="text-[#010101] text-[18px] lg:text-[21px] font-light ">
               Select at least 6 categories of your interest{' '}
             </p>
           </div>

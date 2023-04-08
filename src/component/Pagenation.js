@@ -66,7 +66,7 @@ const Pagination = (props) => {
         </li>
       </div>
 
-      <div className="flex gap-2 items-center mx-auto mr-40 md:mx-auto  w-[80px] md:w-[130px] ">
+      <div className="flex gap-2 items-center mx-auto mr- md:mx-auto  w-[100px] md:w-[130px] ">
         {paginationRange.map((pageNumber) => {
           // If the pageItem is a DOT, render the DOTS unicode character
           // if (pageNumber === DOTS) {
