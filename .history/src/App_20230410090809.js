@@ -37,7 +37,7 @@ function App() {
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/interest" element={<Interest />} />
           <Route path="/setting-up" element={<SettingUp />} />
-          <Route path="/account" element={<Account />} />
+          <Route path="/accou" element={<Account />} />
         </Routes>
       </BrowserRouter>
     </div>
