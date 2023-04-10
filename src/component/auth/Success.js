@@ -199,7 +199,7 @@ export default function Success() {
 
                   <div className=" hidden md:block md:mt-0">
                     <button className="bg-[#2B365A] text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] md:w-full w-[281px] ">
-                      <Link to="/interest">Go to Survey</Link>
+                      <Link to="/setting-up">Go to Survey</Link>
                     </button>
                   </div>
                   <div className=" md:hidden mt-36 md:mt-0">

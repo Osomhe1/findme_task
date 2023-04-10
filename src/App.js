@@ -13,6 +13,7 @@ import NewPassword from './component/auth/NewPassword';
 import Verify from './component/auth/Verification';
 import Success from './component/auth/Success';
 import Interest from './component/pages/Interest';
+import SettingUp from './component/pages/SettingUp';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/success" element={<Success />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/interest" element={<Interest />} />
+          <Route path="/setting-up" element={<SettingUp />} />
         </Routes>
       </BrowserRouter>
     </div>
