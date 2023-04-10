@@ -41,7 +41,7 @@ export default function SettingUp() {
             </div>
           </div>
 
-          <div className=" items-center  max-w-[500px w-[600px] relative bg-[#FFFFFF] shadow-2xl text-center p-12 ">
+          <div className=" items-center  max-w-[500px] w-[600px] relative bg-[#FFFFFF] shadow-2xl text-center p-12 ">
             
             <div className="absolute top-2 right-2 ">
               <svg
