@@ -15,6 +15,8 @@ import Success from './component/auth/Success';
 import Interest from './component/pages/Interest';
 import SettingUp from './component/pages/SettingUp';
 import Account from './component/pages/Account';
+import AgentRegistation from './component/auth/Agent_reg';
+import Plan from './component/agent/reg_plan/BasicPlan';
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
           <Route path="/interest" element={<Interest />} />
           <Route path="/setting-up" element={<SettingUp />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/agent-reg" element={<AgentRegistation />} />
+          <Route path="/plan" element={<Plan />} />
         </Routes>
       </BrowserRouter>
     </div>

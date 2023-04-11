@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import Navbar from '../Navbar'
 
 export default function Account() {
   return (
     <div>
+      <Navbar />
       <section className="p-3">
         <div className=" px-8 md:p-8 md:mx-10  ">
           <Link to="/">
@@ -93,14 +95,16 @@ export default function Account() {
                 </div>
               </div>
               <div className="flex gap-4 items-center justify-between w-full border-[#999999] p-3 my-4 border-b-2  ">
-                <div className="py-2">
-                  <h1 className="text-[#2B365A] font-bold text-[15px] ">
-                    Register as a business listing
-                  </h1>
-                  <p className="text-[#787878] text-[14px] font-medium ">
-                    Create your business as a listing without a dashboard
-                  </p>
-                </div>
+                <Link to="/agent-reg">
+                  <div className="py-2">
+                    <h1 className="text-[#2B365A] font-bold text-[15px] ">
+                      Register as a business listing
+                    </h1>
+                    <p className="text-[#787878] text-[14px] font-medium ">
+                      Create your business as a listing without a dashboard
+                    </p>
+                  </div>
+                </Link>
                 <div className="">
                   <svg
                     width="28"
