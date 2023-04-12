@@ -17,6 +17,8 @@ import SettingUp from './component/pages/SettingUp';
 import Account from './component/pages/Account';
 import AgentRegistation from './component/auth/Agent_reg';
 import Plan from './component/agent/reg_plan/BasicPlan';
+import EnterpricePlan from './component/agent/reg_plan/EnterpricePlan';
+import InvestmentPlan from './component/agent/reg_plan/InvestmentPlan';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/agent-reg" element={<AgentRegistation />} />
           <Route path="/plan" element={<Plan />} />
+          <Route path="/enterprice-plan" element={<EnterpricePlan />} />
+          <Route path="/investment-plan" element={<InvestmentPlan />} />
         </Routes>
       </BrowserRouter>
     </div>
