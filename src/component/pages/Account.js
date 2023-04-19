@@ -1,16 +1,20 @@
-import { Link } from 'react-router-dom'
-import Navbar from '../Navbar'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Account() {
+  const navigate = useNavigate()
+
+   const [isOpen, setIsOpen] = useState(false)
+
+
   return (
     <div>
-      <Navbar />
       <section className="p-3">
         <div className=" px-8 md:p-8 md:mx-10  ">
-          <Link to="/">
+          <button onClick={() => navigate(-1)}>
             <svg
-              width="46"
-              height="46"
+              width="21"
+              height="21"
               viewBox="0 0 46 46"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +28,7 @@ export default function Account() {
                 fill="#2B365A"
               />
             </svg>
-          </Link>
+          </button>
         </div>
         <div className="flex flex-wrap justify-between gap-2 items-center md:w-[90%] m-auto ">
           <div className=" text-cente  w-ful   lg:block  pb-20 ">
@@ -37,92 +41,111 @@ export default function Account() {
               </p>
             </div>
 
-            <div className="">
-              <div className="flex gap-4 items-center justify-between w-full border-[#999999] p-3 my-4 border-b-2  ">
-                <Link to="/email-recovery">
-                  <div className=" my-4 flex gap-2 items-center">
-                    <h1 className="text-[#2B365A] font-bold text-[15px] ">
-                      New
-                    </h1>
+
+            <div className="relative">
+              
+              <div className="flex gap-4 items-center justify-between w-[321px] border-[#999999] p-3 my-4 border-b-2  ">
+                <div
+                  onClick={() => setIsOpen(!isOpen)}
+                  className=" my-4 flex gap-2 items-center cursor-pointer"
+                >
+                  <h1 className="text-[#2B365A] font-bold text-[15px] ">New</h1>
+                  <div className="">
+                    
+
+                    <svg
+                      className={`w-14 h-3 ml-2 ${
+                        isOpen ? 'transform rotate-180' : ''
+                      }`}
+                      width="14"
+                      height="9"
+                      viewBox="0 0 14 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1.92578L7 7.25346L13 1.92578"
+                        stroke="#2B365A"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              {isOpen && (
+                <div className="absolute top-10 right z-10 w48 py-12  rounded-md ">
+                  <div
+                    onClick={() => setIsOpen(false)}
+                    className="flex gap-4 items-center justify-between w-[321px] border-[#999999] px-3  border-b-2  "
+                  >
+                    <Link to="/agent-reg">
+                      <div className="mb-2">
+                        <h1 className="text-[#2B365A] font-bold text-[15px] ">
+                          Create your business
+                        </h1>
+                        <p className="text-[#787878] text-[14px] font-medium ">
+                          Create your business or register your already existing
+                          business
+                        </p>
+                      </div>
+                    </Link>
                     <div className="">
                       <svg
-                        width="14"
-                        height="9"
-                        viewBox="0 0 14 9"
+                        width="28"
+                        height="30"
+                        viewBox="0 0 28 30"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M1 1.92578L7 7.25346L13 1.92578"
+                          d="M11 21.4284L17 14.9999L11 8.57129"
                           stroke="#2B365A"
-                          stroke-width="2"
+                          stroke-width="1.5"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
                     </div>
                   </div>
-                </Link>
-              </div>
-              <div className="flex gap-4 items-center justify-between w-full border-[#999999] p-3 my-4 border-b-2  ">
-                <Link to="/phone-recovery">
-                  <div className="py-2">
-                    <h1 className="text-[#2B365A] font-bold text-[15px] ">
-                      Create your business
-                    </h1>
-                    <p className="text-[#787878] text-[14px] font-medium ">
-                      Create your business or register your already existing
-                      business
-                    </p>
-                  </div>
-                </Link>
-                <div className="">
-                  <svg
-                    width="28"
-                    height="30"
-                    viewBox="0 0 28 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+
+                  <div
+                    onClick={() => setIsOpen(false)}
+                    className="flex gap-4 items-center justify-between w-[321px] border-[#999999] px-3  border-b-2  "
                   >
-                    <path
-                      d="M11 21.4284L17 14.9999L11 8.57129"
-                      stroke="#2B365A"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="flex gap-4 items-center justify-between w-full border-[#999999] p-3 my-4 border-b-2  ">
-                <Link to="/agent-reg">
-                  <div className="py-2">
-                    <h1 className="text-[#2B365A] font-bold text-[15px] ">
-                      Register as a business listing
-                    </h1>
-                    <p className="text-[#787878] text-[14px] font-medium ">
-                      Create your business as a listing without a dashboard
-                    </p>
+                    <Link to="/agent-reg">
+                      <div className="mb-2 mt-2">
+                        <h1 className="text-[#2B365A] font-bold text-[15px] ">
+                          Register as a business listing
+                        </h1>
+                        <p className="text-[#787878] text-[14px] font-medium ">
+                          Create your business as a listing without a dashboard
+                        </p>
+                      </div>
+                    </Link>
+                    <div className="">
+                      <svg
+                        width="28"
+                        height="30"
+                        viewBox="0 0 28 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11 21.4284L17 14.9999L11 8.57129"
+                          stroke="#2B365A"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </Link>
-                <div className="">
-                  <svg
-                    width="28"
-                    height="30"
-                    viewBox="0 0 28 30"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11 21.4284L17 14.9999L11 8.57129"
-                      stroke="#2B365A"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+
+                  
                 </div>
-              </div>
+              )}
             </div>
           </div>
 

@@ -1,34 +1,90 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import DropdownWithOthers from '../agent/Dropdown'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import DropdownWithOthers from './Dropdown'
 
-export default function AgentRegistation() {
-  const navigate = useNavigate()
+export default function BusinessName() {
+
+   const [otherValue, setOtherValue] = useState('')
+   const [isOtherSelected, setIsOtherSelected] = useState(false)
+    const [selectedOption, setSelectedOption] = useState('')
+
+
+   const handleSelectChange = (e) => {
+     e.preventDefault()
+     const selectedValue = e.target.value
+     setSelectedOption(selectedValue)
+     setIsOtherSelected(selectedValue === 'other')
+   }
+
+   const handleOtherInputChange = (e) => {
+     setOtherValue(e.target.value)
+   }
+
+   const options = [
+     {
+       value: 'Enter your business category',
+       label: 'Enter your business category',
+     },
+     {
+       value: 'deen',
+       label: 'Deen',
+     },
+     {
+       value: 'cult',
+       label: 'Cult',
+     },
+     {
+       value: 'joy',
+       label: 'Joy',
+     },
+     {
+       value: 'dean',
+       label: 'Dean',
+     },
+     {
+       value: 'delivery service',
+       label: 'Delivery Service',
+     },
+     {
+       value: 'darmatologist',
+       label: 'Darmatologist',
+     },
+     {
+       value: 'don',
+       label: 'Don',
+     },
+     {
+       value: 'dentist',
+       label: 'Dentist',
+     },
+     {
+       value: 'other',
+       label: 'Other',
+     },
+   ]
 
   return (
     <div className="bg-[#F5F5F5] min-h-screen ">
       <section className="p-">
         <div className=" px-8 md:p-8 md:mx-10 flex justify-between  ">
-          <button onClick={() => navigate(-1)}>
-            <Link to="/">
-              <svg
-                width="26"
-                height="26"
-                viewBox="0 0 26 26"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.667 13.2969C21.667 13.7082 21.3613 14.0482 20.9647 14.102L20.8545 14.1094L4.60449 14.1094C4.15576 14.1094 3.79199 13.7456 3.79199 13.2969C3.79199 12.8855 4.09766 12.5456 4.49424 12.4918L4.60449 12.4844L20.8545 12.4844C21.3032 12.4844 21.667 12.8481 21.667 13.2969Z"
-                  fill="#2B365A"
-                />
-                <path
-                  d="M11.7315 19.2478C12.0495 19.5644 12.0506 20.0789 11.734 20.3969C11.4461 20.686 10.9948 20.7131 10.6762 20.4778L10.5849 20.3994L4.03075 13.8734C3.74081 13.5847 3.71443 13.1317 3.95164 12.8131L4.0307 12.7219L10.5849 6.1948C10.9028 5.87815 11.4173 5.87922 11.7339 6.19717C12.0218 6.48623 12.0471 6.93767 11.8104 7.25526L11.7315 7.34622L5.75584 13.2979L11.7315 19.2478Z"
-                  fill="#2B365A"
-                />
-              </svg>
-            </Link>
-          </button>
+          <Link to="/">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.667 13.2969C21.667 13.7082 21.3613 14.0482 20.9647 14.102L20.8545 14.1094L4.60449 14.1094C4.15576 14.1094 3.79199 13.7456 3.79199 13.2969C3.79199 12.8855 4.09766 12.5456 4.49424 12.4918L4.60449 12.4844L20.8545 12.4844C21.3032 12.4844 21.667 12.8481 21.667 13.2969Z"
+                fill="#2B365A"
+              />
+              <path
+                d="M11.7315 19.2478C12.0495 19.5644 12.0506 20.0789 11.734 20.3969C11.4461 20.686 10.9948 20.7131 10.6762 20.4778L10.5849 20.3994L4.03075 13.8734C3.74081 13.5847 3.71443 13.1317 3.95164 12.8131L4.0307 12.7219L10.5849 6.1948C10.9028 5.87815 11.4173 5.87922 11.7339 6.19717C12.0218 6.48623 12.0471 6.93767 11.8104 7.25526L11.7315 7.34622L5.75584 13.2979L11.7315 19.2478Z"
+                fill="#2B365A"
+              />
+            </svg>
+          </Link>
 
           <p className="md:hidden text-[#2B365A] text-[14px]  font-semibold ">
             Setp 2 of 6
@@ -40,10 +96,10 @@ export default function AgentRegistation() {
               <div className=" md:text-center">
                 <div className=" py-4 md:block">
                   <h1 className="text-[#2B365A] py-3  md:block font-bold text-[24px] md:text-[30px] ">
-                    Register Business
+                    Business Information
                   </h1>
                   <p className="text-[#787878] text-[16px] max-w-[300px font- md:text-center py-2 md:py-2 md:mb-4 ">
-                    Choose the category that best describes your business
+                    Type your Business name
                   </p>
                 </div>
               </div>
@@ -51,8 +107,38 @@ export default function AgentRegistation() {
               <div className=" ">
                 <div className="p-">
                   <form>
+                    <p className="text-[#2B365A] text-[14px]  ">
+                      {' '}
+                      Business Name
+                    </p>
                     <div className="">
-                      <DropdownWithOthers />
+                      <input
+                        className="w-full px-4 py-2  border text-[#2B365A] text-[14px] border-gray-300 rounded-md h-[51px] focus:outline-none focus:border-[#2B365A]"
+                        value={selectedOption}
+                        onChange={handleSelectChange}
+                      />
+                        {options.map((option) => (
+                          <option value={option.value}>{option.label}</option>
+                        ))}
+                      {/* </input> */}
+                      {isOtherSelected && (
+                        <input
+                          className="mt-2 w-full px-4 py-2 border  text-[#2B365A] text-[14px] border-gray-300 h-[51px] rounded-md focus:outline-none focus:border-[#2B365A] "
+                          type="text"
+                          placeholder="Enter other value"
+                          value={otherValue}
+                          onChange={handleOtherInputChange}
+                        />
+                      )}
+                    </div>
+
+                    <div className="m-auto w-[300px] ">
+                      <button
+                        className="mt-2 px-4 py-2 
+                      bg-[#2B365A] ease-in-out transition hover:-translate-y-1 delay-150 duration-300 hover:scale-110 text-white font-bold border-2 border-[#2B365A] p-3 rounded-[8px] md:w-full  w-[281px] "
+                      >
+                        <Link to="/plan">Next</Link>
+                      </button>
                     </div>
                   </form>
                 </div>
